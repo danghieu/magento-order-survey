@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<config>
+    <sections>
+        <customersurvery translate="label" module="customersurvey">
+            <label>Customer Survey</label>
+            <tab>customer</tab>
+            <sort_order>600</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <customersurvery translate="label">
+                    <label>settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <time_to_send_survey translate="label comment">
+                            <label>Send customer survery time (Hours): </label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>The time after an user's order is completed, auto sending a survey email to user</comment>
+                        </time_to_send_survey>
+                        <template>
+                            <label>Customer Survey Email tample</label>
+                            <show_in_default>2</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>2</sort_order>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_email_template</source_model>
+                        </template>
+                        <survey_url translate="label comment">
+                            <label>Customer Survey Url: </label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </survey_url>
+                        <survey_form translate="label comment">
+                            <label>Customer Survey Form: </label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Select Form in Form Builder</comment>
+                        </survey_form>
+                    </fields>
+                </customersurvery>
+            </groups>
+        </customersurvery>
+    </sections>
+</config>

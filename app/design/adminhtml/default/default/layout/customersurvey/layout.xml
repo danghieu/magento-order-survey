@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout>
+    <adminhtml_sales_order_view>
+        <reference name="order_info">
+            <block type="customersurvey/adminhtml_order_status" name="customersurvey.order.status" template="customersurvey/status.phtml"/>
+        </reference>
+    </adminhtml_sales_order_view>
+</layout>

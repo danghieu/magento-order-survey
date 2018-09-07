@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <CES_CustomerSurvey>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends></depends>
+        </CES_CustomerSurvey>
+    </modules>
+</config>

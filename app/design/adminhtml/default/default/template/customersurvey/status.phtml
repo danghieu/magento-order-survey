@@ -1,0 +1,22 @@
+<?php if ($this->canShow()): ?>
+<?php $scheduleStatus = $this->surveyStatus();?>
+<div class="box-left entry-edit">
+    <div class="entry-edit-head"><h4><?php echo Mage::helper('sales')->__('Survey Status') ?></h4></div>
+    <fieldset>
+        <?php if ($scheduleStatus->getEmail()):?>
+            <?php if ($scheduleStatus->getSent()): ?>
+                <div>Order Survey is sent on <?php echo $scheduleStatus->getSentTime(); ?></div>
+                <?php $sendSurveyTitle = Mage::helper('sales')->__('Resend Survey'); ?>
+            <?php else: ?>
+                <div>Order Survey will be sent on <?php echo $scheduleStatus->willBeSend(); ?></div>
+                <?php $sendSurveyTitle = Mage::helper('sales')->__('Send Survey Now'); ?>
+            <?php endif; ?>
+        <?php else:?>
+            <div>Order Survey haven't sent</div>
+             <?php $sendSurveyTitle = Mage::helper('sales')->__('Send Survey Now'); ?>
+        <?php endif; ?>
+        <div><a href="<?php echo $this->getResendSurveyLink() ?>"><?php echo $sendSurveyTitle; ?></a></div>
+    </fieldset>
+</div>
+<div class="clear"></div>
+<?php endif; ?>
